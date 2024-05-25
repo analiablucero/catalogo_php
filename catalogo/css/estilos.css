@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Nunito', sans-serif;
+    src: url("../assets/fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf");
+}
+
+/*reseteo de valores*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/*
+.box:hover{
+   transform: translate(300px, 200px) scale(2);
+}*/
+
+/*configuracion de variables*/
+:root{
+    --main-color: #000000;
+    --secondary-color: #fafafaf1;
+    --third-color: #fafafaf1;
+    --third-color-t: #060484bc;
+}
+
+/*estilos del body*/
+body{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+/*generalidades*/
+h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+   
+}
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/*media querys para dispositivos hasta 800px para el h1, h2 y h3*/
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+
+}
+
+
+header,footer{
+    background-color: var(--third-color);
+    color: var(--main-color);
+    padding: 10px;
+}
+
+/*Estilos del Header*/
+.header{
+    height: 20vh;
+    position:sticky;
+    top:0;  
+    z-index: 10;
+    nav{
+        height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            text-decoration: none;
+            color: var(--main-color);
+            .logo{
+                /*animacion hover*/
+            &:hover{
+                animation: tilt-n-move-shaking 0.25s infinite;
+            }
+            }
+        }
+        ul{
+            font-size: 1.4rem;
+            list-style: none;
+            display: flex;
+            column-gap: 30px;
+            a{
+                font-size:1.4rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .header{
+       height:initial;
+       nav{
+         flex-direction: column;
+         row-gap: 20px;
+         ul{
+             flex-direction: column;
+             row-gap: 10px;
+         }
+       }
+ 
+    }
+     
+ }
+ /*main
+ estilos seccion principal
+ */ 
+.Principal{
+    height: 85vh;
+    background: linear-gradient(to bottom, #00000075, #424141ee),url("../assets/img/unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    .contenidoPrincipal{
+        text-align: center;
+        backdrop-filter: blur(5px);/*efecto blur a un contenedor*/
+        width:60%;
+        margin:0 auto;
+        border-radius: 5px;
+        a{
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color:var(--main-color);
+            font-size: 1rem;
+            border:2px solid var(--main-color);
+            border-radius: 5px;
+            padding:10px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .Principal{
+        height: 75vh;
+        background:linear-gradient(to bottom, #000000a3, #000000a3),url("../assets/img/bg_mobile.jpg");
+        .contenidoPrincipal{
+            width: 90%;
+            backdrop-filter:initial;
+            a{/*boton de registrarse de la seccion de arriba*/
+                font-size: 1.5rem;
+            }
+        }
+    }
+  
+}
+
+.novedades{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+
+    .galeriaNovedades{
+        display:flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom:20px;
+        div{
+            box-shadow: 17px 17px 5px -10px rgba(0,0,0,0.24);
+            width: 250px;
+            height: 350px;
+            border-radius: 30px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 30px; 
+                /*transform: translate(100px, 50px);
+                transform: translate(100px, 50px) scale(1);
+                transform: translate(100px, 50px) rotate(60deg) scale(1);
+                transform: translate(100px, 50px) rotate(70deg) scale(1) skew(30deg, 30deg);
+                transform: translate(100px, 50px); */ 
+                transition: all 2s ease-in-out;  
+                &:hover{
+                    transform: scale(1.1);        
+                }
+        }
+    } 
+
+    button{
+        margin-bottom: 20px;
+    } 
+}
+}
+
+/*estilos de section productos más vendidos*/
+.favoritas{
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+    .galeriafavoritas{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        column-gap: 30px;
+        div{
+            width: 220px;
+            height: 350px;
+            flex-shrink: 0;
+            box-shadow: 10px 10px 47px -45px rgba(255,255,255,0.29);
+           
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+}
