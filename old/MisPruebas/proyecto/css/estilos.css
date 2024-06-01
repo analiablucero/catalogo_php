@@ -1,0 +1,157 @@
+/* .caja {
+
+    width: 100px;
+    
+    height: 100px;
+    
+    background: red;
+    
+    color: white;
+    
+    }
+    
+     
+    
+    #uno {
+    
+    position: fixed;
+    
+    top: 80px;
+    
+    left: 10px;
+    
+    background: blue;
+    
+    width: 500px;
+    
+    }
+    
+     
+    
+    .vista {
+    
+    width: 500px;
+    
+    height: 300px;
+    
+     
+    
+    padding-left: 150px;
+    
+    background: red;
+    
+    }
+
+#dos {
+
+    position: static;
+    
+    top: 20px;
+    
+    left: 20px;
+    
+    background: black;
+    
+    }
+/*
+.red {
+
+    color: #f33;
+    
+    }
+    
+    .yellow-bg {
+    
+    background: #ffa;
+    
+    }
+    
+    .fancy {
+    
+    font-weight: bold;
+    
+    text-shadow: 4px 4px 3px #77f;
+    
+    }
+    
+    #confondo {
+
+    background-color: skyblue;
+
+    }
+
+    *[lang=en] {
+
+        color: green;
+        
+        }
+        
+        *.warning {
+        
+        color: red;
+        
+        }
+        
+        *#maincontent {
+        
+        border: 1px solid blue;
+        
+        }*/
+
+        a {
+
+            color: black;
+            
+            }
+            
+            /* Links internos que comienzan con "#" */
+            
+            a[href^="#"] {
+            
+            background-color: gold;
+            
+            }
+            
+            /* Links con "ejemplo" en la URL */
+            
+            a[href*="ejemplo"] {
+            
+            background-color: silver;
+            
+            }
+            
+            /* link con la palabra "sinmayusculas"en la URL,
+            
+            sin chequear mayúsculas */
+            
+            a[href*="insensitive" i] {
+            
+            color: blue;
+            
+            }
+            
+            /* link con la palabra "ConMAyusculas"en la URL,
+            
+            con chequeo de mayúsculas */
+            
+            a[href*="ConMAyusculas"] {
+            
+            color: orange;
+            
+            }
+            
+            /* Links que terminen en ".org" */
+            
+            a[href$=".org"] {
+            
+            color: red;
+            
+            }
+            
+            /* Links que comienzan con "https" y terminan en ".org" */
+            
+            a[href^="https"][href$=".org"] {
+            
+            color: green;
+            
+            }

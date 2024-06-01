@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(11, 11, 11);
+            color: white;
+            text-align: center;
+            height: 100vh;
+        }
+        .galeria {
+            width: 90%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap:10px;
+        }
+        .item {
+            width: 300px;
+            height: 300px;
+            /*para que la imagen quede centrada en su contenedor y se vea el borde blanco*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+           
+        }
+        .item img {
+            width: 90%;
+            height: 90%;
+            /*para que la imagen se ajuste al contenedor y no se deforme*/
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galeria</h1>
+    </header>
+    <main>
+        <section class="galeria">
+            <div class="item">
+                <img src="./assets/img/autumn.jpg" alt="imagen">
+            </div>
+            <div class="item">
+                <img src="./assets/img/forest-mountain.jpg" alt="imagen">
+            </div>
+            <div class="item">
+                <img src="./assets/img/forest.jpg" alt="imagen">
+            </div>
+            <div class="item">
+                <img src="./assets/img/lavender-field.jpg" alt="imagen">
+            </div>
+            <div class="item">
+                <img src="./assets/img/spring.jpg" alt="imagen">
+            </div>
+            <div class="item">
+                <img src="./assets/img/wooden-bridge.jpg" alt="imagen">
+            </div>
+            <div class="item">
+                <img src="./assets/img/summer.jpg" alt="imagen">
+            </div>
+            <div class="item">
+                <img src="./assets/img/winter.jpg" alt="imagen">
+            </div>
+
+
+        </section>
+    </main>
+    <footer>
+        <p>Flexbox</p>
+    </footer>
+</body>
+</html>
