@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sentir en Libertad | Administrador</title> <!-- Título de la web-->
+        <!-- etiqueta del logo de la página web -->
+        <link rel="shortcut icon" href="../icono.ico" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/4d82db005e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/estilos_boostrap.css">
+    </head>
+    <body>
+        <header>
+            <!-- etiqueta contenedora de la navegación-->
+            <nav>
+                <a href="../index.html">
+                  <img src="../assets/img/logo 640/logosentir.png" alt="Logo Sentir en Libertad" width="100">
+                </a>
+                <ul>
+                    <li>
+                      <a href="../index.html#Novedades">Novedades</a>
+                    </li>
+                    <li>
+                        <a href="#">Registrarse</a>
+                    </li>
+                    <li>
+                        <a href="../pages/inicio_sesion.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Gestión de productos</h1>
+            <h2>En el siguiente formulario, podrás cargar nuevos productos</h2>
+            <form action="validar.php" method="post">
+                <div>
+                  <label for="name">Nombre:</label>
+                  <input type="text" name="nombre" id="name" placeholder="Nombre" >
+                </div>
+                <div>
+                  <label for="descripcion">Descripción:</label>
+                  <input type="text" name="descripcion" id="descripcion" placeholder="Ingresar una breve descripción...">
+                </div>
+                <div>
+                    <label for="categoria">Categoría:</label>
+                        <select name="categoria" id="categoria" placeholder="Seleccionar Opción" >
+                            <option value="" selected></option>
+                            <option value="" selected></option> 
+                        </select>
+                </div>
+                <div>
+                    <label for="subcategoría">Subcategoría:</label>
+                        <select name="subcategoría" id="subcategoría" placeholder="Seleccionar Opción">
+                            <option value="" selected></option>
+                            <option value="" selected></option>   
+                        </select>
+                </div>
+                <div>
+                    <label for="caracteristicas">Características</label>
+                    <input type="text" name="caracteristicas" id="caracteristicas" placeholder="Ingresar las características..." >
+                </div>
+                <div>
+                    <label for="precio">Precio</label>
+                    <input type="number" name="precio" id="precio" placeholder="Ingresar precio de venta" >
+                </div>
+                <div>
+                    <label for="disponible">Stock</label>
+                    <select name="disponible" id="disponible" >
+                        <option value="NO DISPONIBLE" selected>NO DISPONIBLE</option>
+                        <option value="DISPONIBLE" selected>DISPONIBLE</option>   
+                    </select>
+                  </div>
+                <div>
+                    <label for="imagen">Cargar Imágen</label>
+                    <!-- Botón para adjuntar imágen-->
+                    <!-- Incorporar Listado de Productos existentes-->
+                </div>
+               <div>
+                <input type="reset" value="Limpiar"> <!--Limpiar el formulario-->
+                <input type="submit" value="Guardar">
+                <input type="submit" value="Cancelar">
+               </div>
+            </form>
+        </main>
+        <footer>
+          <p>Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

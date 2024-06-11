@@ -1,0 +1,396 @@
+/*reseteo de valores*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/*configuracion de variables*/
+:root{
+    --main-color: #B6C4A0;
+    --secondary-color: #D7878A;
+    --third-color: #EFE7D0;
+    --third-color-t: #B6C4A0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+
+h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+body{
+    background-color: #B6C4A0;
+    color:white; 
+     /* scrollbar-color: #9f3647  #181419; /*nuevo
+     scrollbar-width: thin;*/
+}
+
+header,footer{
+    background-color: var(---third-color-t);
+    color: var(--third-color-t);
+    position:sticky;
+    padding: 0px;
+    top: 0;
+    z-index:10;
+}
+
+header .bg-light {
+    display: flex;
+    background-color: var(--third-color) !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+header .navbar-brand img {
+    width: 150px; /* Tamaño del logo */
+}
+
+header .navbar-brand.animate__animated {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+header .navbar-nav .nav-item {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 5vh ;
+}
+
+header .navbar-nav .nav-item:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #fafdf9;
+}
+
+.main .Principal {
+    color: white;
+    height: 80vh;
+    background: linear-gradient(to bottom, #00000075, #424141ee), url("../assets/img/unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main .Principal .tituloPrincipal {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.main .Principal .subtituloPrincipal {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.main .Principal .botonRegistrar {
+    margin-top: 2rem;
+    background-color: var--third-color-t;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.main .Principal .botonRegistrar:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+.main .buscadorPrincipal {
+        background-color: rgb(201, 198, 198);
+        color:rgb(12, 12, 12);
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .tituloSection{
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .buscadorCatalogo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
+                .inputBuscador{
+                    border: 2px solid rgb(0, 0, 0);
+                    border-radius: 25px;
+                    color: #000000;
+                    font-size: 1.2rem;
+                    height: 50px;
+                    margin: 20px 0px;
+                    outline: none;
+                    padding: 0px 20px;
+                    width: 500px;
+                }
+                .botonBuscar{
+                    background-color: var(--third-color);
+                    display: inline-block;
+                    color:#000000;
+                    height: 50px;
+                    margin: 20px 10px;
+                    padding:0 20px;
+                    border-radius: 25px;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    border: 2px solid rgb(0, 0, 0);
+                    text-align: center;
+                     /* Agregar efecto de botón presionado */
+                     transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover {
+                        background-color: transparent;
+                         transform: scale(0.95);
+                         box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                    }
+                }
+        }
+}   
+
+.main .productosNovedades{
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    .tituloSection{
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+    .galeriaNovedades{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:60px;
+        a{
+            text-decoration: none;
+            color: #000000;
+            .productos{
+                width:200px;
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+                .imgNovedades{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+                .tituloProducto{
+                    z-index: 2;
+                    position: absolute;
+                    text-align: center;
+                    top: 50%;
+                    left: 50%;
+                    max-width: 20rem;
+                    width: 100%;
+                    transform: translateY(-50%) translateX(-50%);
+                    h4 {
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        opacity: 0;
+                        margin-bottom: 0.5rem;
+                        letter-spacing: 0.1rem;
+                        transition: opacity 0.5s ease-in-out;
+                     }
+                }
+                &:hover{
+                    box-shadow: 0 0 30px var(--third-color-t);
+                    transform: scale(0.9);
+                }
+                &:hover .tituloProducto{
+                    width: 100%;
+                    height: 100%;
+                    backdrop-filter: blur(20px);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                 &:hover h4 {
+                    width: 100%;
+                    padding: 0.5rem;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}         
+.main .productosNovedades .boton{
+    border: 1px solid var(--third-color-t);
+    box-sizing: content-box;
+    margin-top:50px;
+    margin-left:20px;
+    background-color:var(--third-color);
+    color: #030303;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom:60px;
+     /* Agregar efecto de botón presionado */
+     transition: transform 0.3s, box-shadow 0.3s;
+     &:hover {
+        background-color: var(--third-color);
+        color: var(--main-color);
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+     }
+
+}
+
+.main .productosfavoritos{
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom:60px;
+    .tituloSection{
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+    .galeriaFavoritos{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px 0px 40px 0px;
+        .favoritoItem{
+            border-radius: 25px;
+            width: 170px;
+            min-width: 170px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+                .imgAclamada{
+                    border-radius: 5%;
+                    width: 95%;
+                    height: 95%;
+                    object-fit: cover;
+                }    
+        }
+    }
+}     
+
+.footer {
+    padding:20px;
+    background-color: var(--third-color);
+    color: var(--main-color);
+    height: 50vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    .navbar {
+        display: flex;
+        justify-content:end;
+        align-items: center;  
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            .nav-link{
+                margin-left:20px;
+                .linkNav{
+                    text-decoration: none;
+                    color:#050505;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                }
+                .administrador{
+                    background-color: #181419;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .flechaArriba{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.footer .whatsapp{
+    align-items: flex-end;
+}
+/*PAGINA Registrarse */
+.bregistrarse{
+    height: 100vh;
+    background:linear-gradient(to right top, #24242473,#24242473),url("../assets/img/bg-register.jpg");
+    background-size: cover;
+    background-position: center;
+    .hregistrarse{
+        color:#ffffff;
+        height: 8vh;
+        padding:30px;
+        .navbar-nav .nav-item{
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            /* Agregar efecto de botón presionado */
+            transition: transform 0.3s, box-shadow 0.3s;
+            &:hover {
+                transform: scale(0.95);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                border-radius: 10px;
+                &:hover {
+                    background-color: #fafdf9;
+                }
+            }
+        }
+    }
+}      
+    
+hr{
+    border: 1px solid var(--third-color);
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+}    
+
+    
+    
+    
+    
